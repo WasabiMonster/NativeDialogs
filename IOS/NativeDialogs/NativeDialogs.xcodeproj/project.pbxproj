@@ -409,30 +409,29 @@
 /* Begin PBXShellScriptBuildPhase section */
 		9A0396EF16BD905700445AD1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "chmod 755 \"$PROJECT_DIR/$PROJECT_NAME/aneBuildBefore.sh\"\n\"$PROJECT_DIR/$PROJECT_NAME/aneBuildBefore.sh\"\n\t\t\t\t\t";
+			runOnlyForDeploymentPostprocessing = 1;
+			shellScript = "\n\t\t\t\t\t";
 			showEnvVarsInLog = 0;
 		};
 		9A0396F316BD905700445AD1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "chmod 755 \"$PROJECT_DIR/$PROJECT_NAME/aneBuildAfter.sh\"\n\"$PROJECT_DIR/$PROJECT_NAME/aneBuildAfter.sh\"\n\t\t\t\t\t";
+			runOnlyForDeploymentPostprocessing = 1;
+			shellScript = "\n\t\t\t\t\t";
+			showEnvVarsInLog = 0;
 		};
 		9ADF1B1916BF0F2E00DA9AAA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -538,40 +537,44 @@
 		9A03972216BD905700445AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CONFIGURATION_TEMP_DIR = "build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				DSTROOT = /tmp/NativeDialogs.dst;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeDialogs/NativeDialogs-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/mmmackowiak/Documents/apacheFlex/Flex 4.10 AIR 3.8/include/";
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s i386 arm64";
 			};
 			name = Debug;
 		};
 		9A03972316BD905700445AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CONFIGURATION_TEMP_DIR = "build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				DSTROOT = /tmp/NativeDialogs.dst;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeDialogs/NativeDialogs-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/mmmackowiak/Documents/apacheFlex/Flex 4.10 AIR 3.8/include/";
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "armv7 armv7s i386 arm64";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s i386 arm64";
 			};
 			name = Release;
 		};
