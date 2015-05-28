@@ -59,8 +59,29 @@
 		<copy file="${ANDROID_LIB_PATH}" todir="${BINARIES_FOLDER}/Android"/>
 	</target>
 
+    <target name="compileSwf" description="Build SWC library" depends="androidCopy">
+    
+        <fileset dir="${ACTIONSCRIPT_FOLDER}/src" casesensitive="yes" id="classfiles">
+            <include name="**/*.as"/>
+        </fileset>
+    
+        <pathconvert property="classlist" refid="classfiles" pathsep=" " dirsep=".">
+            <regexpmapper from=".*src.(.*)\.as" to="\1"/>
+        </pathconvert>
+    
+        <exec executable="${AIR_SDK_PATH}/bin/compc" failonerror="true">
+            <env key="AIR_SDK_HOME" value="${AIR_SDK_PATH}"/>
+            <arg line='-source-path ${ACTIONSCRIPT_FOLDER}/src'/>
+            <arg line='-output ${SWC_PATH}'/>
+            <arg line='-swf-version=27'/>
+            <arg line='-debug=true'/>
+            <arg line='-external-library-path+="${AIR_SDK_PATH}/frameworks/libs/air/airglobal.swc"'/>
+            <arg line='-include-classes ${classlist}'/>
+        </exec>
+    </target>
+
 	<!-- Unzip SWF file and copy it to binaries folders -->
-	<target name="unzipSwf" depends="androidCopy">
+	<target name="unzipSwf" depends="compileSwf">
 	    <mkdir dir="temp"/>
 		<unzip src="${SWC_PATH}" dest="temp"/>
 		<copy file="temp/library.swf" todir="${BINARIES_FOLDER}/Default"/>

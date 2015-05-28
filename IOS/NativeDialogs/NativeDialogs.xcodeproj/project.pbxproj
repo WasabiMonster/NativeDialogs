@@ -386,7 +386,7 @@
 		9A0396EB16BD905700445AD1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0630;
 			};
 			buildConfigurationList = 9A0396EE16BD905700445AD1 /* Build configuration list for PBXProject "NativeDialogs" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -490,7 +490,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -508,6 +507,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "/Applications/Adobe Flash Builder 4.7/sdks/4.6.0 AIR3.6/include/";
 			};
@@ -517,7 +517,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -537,7 +536,6 @@
 		9A03972216BD905700445AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CONFIGURATION_TEMP_DIR = "build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				DSTROOT = /tmp/NativeDialogs.dst;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -559,7 +557,6 @@
 		9A03972316BD905700445AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CONFIGURATION_TEMP_DIR = "build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				DSTROOT = /tmp/NativeDialogs.dst;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
